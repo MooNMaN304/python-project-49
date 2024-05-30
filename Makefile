@@ -16,3 +16,5 @@ package-reinstall:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 brain-calc:
 	poetry run brain-calc
+brain-gcd:
+	poetry run brain-gcd
