@@ -3,7 +3,7 @@
 
 import prompt
 import random
-from brain_games.welcome import welcome_user
+from brain_games.tools.welcome import welcome_user
 
 
 def even_or_no():
