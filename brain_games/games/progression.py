@@ -23,5 +23,5 @@ def progress():
     question = beatiful_question(box)
     print ("What number is missing in the progression?")
     print (f"Question: {question}")
-    answer = prompt.integer('Your answer: ')
-    win = round_number(name, result, answer, win)
+    answer = prompt.string('Your answer: ')
+    win = round_number(name, str(result), answer, win)

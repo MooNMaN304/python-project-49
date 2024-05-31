@@ -1,5 +1,5 @@
 def round_number(name, result, answer, win):
-  if int(answer) == result:
+  if answer == result:
     print("Correct!")
     win += 1
     if win == 3:
@@ -7,9 +7,8 @@ def round_number(name, result, answer, win):
       return win
     return win
   else:
-    print(
-        f"""'{answer}'is wrong answer ;(.Correct answer was '{result}'.Let's try again, {name}!"""
-    )
+    print (f"""'{answer}'is wrong answer ;(. Correct answer was '{result}'.""")
+    print (f"""Let's try again, {name}!""")
     win = -404
     return win
 

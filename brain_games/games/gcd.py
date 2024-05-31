@@ -26,6 +26,6 @@ def big_del():
         if x == y:
           result_del += [x]
     print(f"""Question: {number1} {number2}""")
-    answer = prompt.integer('Your answer: ')
+    answer = prompt.string('Your answer: ')
     result = max(result_del)
-    win = round_number(name, result, answer, win)
+    win = round_number(name, str(result), answer, win)

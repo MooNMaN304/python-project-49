@@ -15,5 +15,5 @@ def calco():
     if win == -404:
       break
     print(f"""Question: {number1} {options[win]} {number2}""")
-    answer = prompt.integer('Your answer: ')
-    win = round_number(name, option[win], answer, win)
+    answer = prompt.string('Your answer: ')
+    win = round_number(name, str(option[win]), answer, win)
