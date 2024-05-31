@@ -5,15 +5,15 @@ from brain_games.tools.round_script import round_number
 
 
 def calco():
-  win = 0
-  name = welcome_user()
-  options = ["+", "-", "*"]
-  while win < 3:
-    number1 = number()
-    number2 = number()
-    option = {0: (number1 + number2), 1: (number1 - number2), 2: (number1 * number2)}
-    if win == -404:
-      break
-    print(f"""Question: {number1} {options[win]} {number2}""")
-    answer = prompt.string('Your answer: ')
-    win = round_number(name, str(option[win]), answer, win)
+    win = 0
+    name = welcome_user()
+    options = ["+", "-", "*"]
+    while win < 3:
+        number1 = number()
+        number2 = number()
+        result = [(number1 + number2), (number1 - number2), (number1 * number2)]
+        if win == -404:
+            break
+        print(f"""Question: {number1} {options[win]} {number2}""")
+        answer = prompt.string('Your answer: ')
+        win = round_number(name, str(result[win]), answer, win)
