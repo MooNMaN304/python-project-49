@@ -5,6 +5,7 @@ from brain_games.tools.round_script import round_number
 
 
 def calco():
+    print ("What is the result of the expression?")
     win = 0
     name = welcome_user()
     options = ["+", "-", "*"]
