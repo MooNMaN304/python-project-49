@@ -7,6 +7,7 @@ from brain_games.tools.round_script import round_number
 def big_del():
     win = 0
     name = welcome_user()
+    print("Find the greatest common divisor of given numbers.")
     while win < 3:
         result_del = []
         if win == -404:
