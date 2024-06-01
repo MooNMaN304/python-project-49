@@ -9,22 +9,14 @@ def big_del():
     name = welcome_user()
     while win < 3:
         result_del = []
-        numb_del1 = []
-        numb_del2 = []
         if win == -404:
             break
         number1 = number()
         number2 = number()
-        for i in range(number1):
-            if number1 % (i + 1) == 0:
-                numb_del1 += [(i + 1)]
-        for j in range(number2):
-            if number2 % (j + 1) == 0:
-                numb_del2 += [(j + 1)]
-        for x in numb_del1:
-            for y in numb_del2:
-                if x == y:
-                    result_del += [x]
+        for i in range(min(number1, number2)):
+            if min(number1, number2) % (i + 1) == 0:
+                if max(number1, number2) % (i + 1) == 0:
+                    result_del += [(i + 1)]
         print(f"""Question: {number1} {number2}""")
         answer = prompt.string('Your answer: ')
         result = max(result_del)
