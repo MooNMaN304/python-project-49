@@ -9,13 +9,14 @@ def progress1():
     number2 = number(1, 20)
     steal = number(0, 9)
     for i in range(10):
-      number1 += number2
-      box += [number1]
+        number1 += number2
+        box += [number1]
     result = box[steal]
     box[steal] = [".."]
     question = beatiful_question(box)
     return str(result), question
 
+
 def progress2():
-    rules = f"What number is missing in the progression?"
+    rules = "What number is missing in the progression?"
     generate_game_data(progress1, rules)

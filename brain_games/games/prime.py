@@ -6,16 +6,16 @@ def if_del1():
     box = []
     number1 = number(1, 100)
     for i in range(number1):
-      if number1 % (i + 1) == 0:
-        box += [i + 1]
+        if number1 % (i + 1) == 0:
+            box += [i + 1]
     if len(box) == 2:
-      result = "yes"
+        result = "yes"
     else:
-      result = "no"
+        result = "no"
     question = f'{number1}'
-    return result, question 
+    return result, question
 
 
 def if_del2():
-    rules = f'Answer "yes" if given number is prime. Otherwise answer "no".'
+    rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     generate_game_data(if_del1, rules)

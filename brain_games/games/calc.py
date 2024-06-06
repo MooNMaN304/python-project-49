@@ -13,5 +13,5 @@ def calco1():
 
 
 def calco2():
-    rules = f"What is the result of the expression?"
-    generate_game_data(calco1,rules)
+    rules = "What is the result of the expression?"
+    generate_game_data(calco1, rules)
