@@ -1,18 +1,3 @@
-def round_number(name, result, answer, win):
-    if answer == result:
-        print("Correct!")
-        win += 1
-        if win == 3:
-            print(f"Congratulations, {name}!")
-            return win
-        return win
-    else:
-        print(f"'{answer}'is wrong answer ;(. Correct answer was '{result}'.")
-        print(f"""Let's try again, {name}!""")
-        win = -404
-        return win
-
-
 def beatiful_question(text):
     abs1 = ""
     for i in text:
@@ -33,3 +18,6 @@ def beatiful_question(text):
             beatiful_result += abs1[j]
             j += 1
     return beatiful_result
+
+
+SIGNS = ["*", "-", "+"]
