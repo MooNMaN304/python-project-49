@@ -1,22 +1,16 @@
-from brain_games.tools.random_number import number
-from brain_games.tools.data import generate_game_data
-from brain_games.tools.round_tools import beatiful_question
+import random
 
 
 def progress1():
     box = []
-    number1 = number(1, 20)
-    number2 = number(1, 20)
-    steal = number(0, 9)
-    for i in range(10):
-        number1 += number2
-        box += [number1]
-    result = box[steal]
-    box[steal] = [".."]
-    question = beatiful_question(box)
+    progressive_lenght = 10
+    start = random.randint(1, 20)
+    step = random.randint(1, 20)
+    steal_number = random.randint(0, 9)
+    for i in range(progressive_lenght):
+        start += step
+        box += [start]
+    result = box[steal_number]
+    box[steal_number] = ".."
+    question = " ".join(map(str, box))
     return str(result), question
-
-
-def progress2():
-    rules = "What number is missing in the progression?"
-    generate_game_data(progress1, rules)

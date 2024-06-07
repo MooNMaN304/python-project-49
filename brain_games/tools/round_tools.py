@@ -1,23 +1,10 @@
-def beatiful_question(text):
-    abs1 = ""
-    for i in text:
-        abs1 += str(i) + " "
-    j = 0
-    beatiful_result = ""
-    while j <= len(abs1) - 1:
-        if abs1[j] == "[":
-            beatiful_result += ""
-            j += 1
-        if abs1[j] == "]":
-            beatiful_result += ""
-            j += 1
-        if abs1[j] == "'":
-            beatiful_result += ""
-            j += 1
-        else:
-            beatiful_result += abs1[j]
-            j += 1
-    return beatiful_result
+RULES = {
+    "calc": "What is the result of the expression?",
+    "progression": "What number is missing in the progression?",
+    "prime": 'Answer "yes" if given number is prime. Otherwise answer "no".',
+    "even": 'Answer "yes" if the number is even, otherwise answer "no".',
+    "gcd": "Find the greatest common divisor of given numbers."
+}
 
 
 SIGNS = ["*", "-", "+"]

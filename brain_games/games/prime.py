@@ -1,10 +1,9 @@
-from brain_games.tools.random_number import number
-from brain_games.tools.data import generate_game_data
+import random
 
 
 def if_del1():
     box = []
-    number1 = number(1, 100)
+    number1 = random.randint(2, 100)
     for i in range(number1):
         if number1 % (i + 1) == 0:
             box += [i + 1]
@@ -12,10 +11,5 @@ def if_del1():
         result = "yes"
     else:
         result = "no"
-    question = f'{number1}'
+    question = str(number1)
     return result, question
-
-
-def if_del2():
-    rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    generate_game_data(if_del1, rules)
