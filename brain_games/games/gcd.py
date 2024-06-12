@@ -1,14 +1,15 @@
 import random
+import math
 
 
-def big_del1():
-    result_del = []
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
-    for i in range(min(number1, number2)):
-        if min(number1, number2) % (i + 1) == 0:
-            if max(number1, number2) % (i + 1) == 0:
-                result_del += [(i + 1)]
-    question = f'{number1} {number2}'
-    result = max(result_del)
-    return str(result), question
+MIN_NUMBER_GAMES = 1
+MAX_NUMBER_GAMES = 100
+
+
+def big_del():
+    RULE = "Find the greatest common divisor of given numbers."
+    first_num = random.randint(MIN_NUMBER_GAMES, MAX_NUMBER_GAMES)
+    second_num = random.randint(MIN_NUMBER_GAMES, MAX_NUMBER_GAMES)
+    question = f'{first_num} {second_num}'
+    result = math.gcd(first_num, second_num)
+    return str(result), question, RULE

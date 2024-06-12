@@ -1,16 +1,23 @@
 import random
 
 
-def progress1():
+MIN_STEP = 1
+MAX_STEP = 20
+PROGRESSIVE_LENGHT = 10
+MIN_HIDDEN_NUMBER = 0
+MAX_HIDDEN_NUMBER = 9
+
+
+def progress():
+    RULE = "What number is missing in the progression?"
     box = []
-    progressive_lenght = 10
-    start = random.randint(1, 20)
-    step = random.randint(1, 20)
-    steal_number = random.randint(0, 9)
-    for i in range(progressive_lenght):
+    start = random.randint(MIN_STEP, MAX_STEP)
+    step = random.randint(MIN_STEP, MAX_STEP)
+    steal_number = random.randint(MIN_HIDDEN_NUMBER, MAX_HIDDEN_NUMBER)
+    for i in range(PROGRESSIVE_LENGHT):
         start += step
         box += [start]
     result = box[steal_number]
     box[steal_number] = ".."
     question = " ".join(map(str, box))
-    return str(result), question
+    return str(result), question, RULE
