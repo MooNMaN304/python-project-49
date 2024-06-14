@@ -1,21 +1,21 @@
 import random
 
 
-MIN_NUMBER_GAMES = 1
-MAX_NUMBER_GAMES = 30
-SIGNS = ["*", "-", "+"]
+RULE = 'What is the result of the expression?'
+MIN_NUMBER = 1
+MAX_NUMBER = 30
+OPERATOR = ['*', '-', '+']
 
 
-def calc():
-    RULE = "What is the result of the expression?"
-    first_num = random.randint(MIN_NUMBER_GAMES, MAX_NUMBER_GAMES)
-    second_num = random.randint(MIN_NUMBER_GAMES, MAX_NUMBER_GAMES)
-    math_sign = random.choice(SIGNS)
-    if math_sign == "+":
+def result_and_question():
+    first_num = random.randint(MIN_NUMBER, MAX_NUMBER)
+    second_num = random.randint(MIN_NUMBER, MAX_NUMBER)
+    math_operation = random.choice(OPERATOR)
+    if math_operation == '+':
         result = first_num + second_num
-    if math_sign == "-":
+    if math_operation == '-':
         result = first_num - second_num
-    if math_sign == "*":
+    if math_operation == '*':
         result = first_num * second_num
-    question = f'{first_num} {math_sign} {second_num}'
-    return str(result), question, RULE
+    question = f'{first_num} {math_operation} {second_num}'
+    return str(result), question

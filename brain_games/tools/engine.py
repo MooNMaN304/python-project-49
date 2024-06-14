@@ -1,26 +1,25 @@
 import prompt
 
 
-def generate_game_data(result_question_rules):
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name} !")
-    result, question, RULES = result_question_rules()
-    print(RULES)
-    win = 0
-    while win < 3:
-        result, question, RULES = result_question_rules()
-        print("Question: " + question)
+GAME_ROUNDS = 3
+
+
+def generate_game_data(game):
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name} !')
+    print(game.RULE)
+    for round in range(GAME_ROUNDS):
+        result, question = game.result_and_question()
+        print('Question: ' + question)
         answer = prompt.string('Your answer: ')
         if answer == result:
-            win += 1
-            if win == 3:
-                print(f"Congratulations, {name}!")
-                break
-            print("Correct!")
+            print('Correct!')
+            if round == 2:
+                print(f'Congratulations, {name}!')
         else:
             print(
-                f"'{answer}' is wrong answer ;(. Correct answer was '{result}'."
+                f'"{answer}" is wrong answer ;(. Correct answer was "{result}".'
             )
-            print(f"""Let's try again, {name}!""")
+            print(f'Let\'s try again, {name}!')
             break

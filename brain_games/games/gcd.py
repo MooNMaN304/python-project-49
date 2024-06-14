@@ -2,14 +2,14 @@ import random
 import math
 
 
-MIN_NUMBER_GAMES = 1
-MAX_NUMBER_GAMES = 100
+RULE = 'Find the greatest common divisor of given numbers.'
+MIN_NUMBER = 1
+MAX_NUMBER = 100
 
 
-def big_del():
-    RULE = "Find the greatest common divisor of given numbers."
-    first_num = random.randint(MIN_NUMBER_GAMES, MAX_NUMBER_GAMES)
-    second_num = random.randint(MIN_NUMBER_GAMES, MAX_NUMBER_GAMES)
+def result_and_question():
+    first_num = random.randint(MIN_NUMBER, MAX_NUMBER)
+    second_num = random.randint(MIN_NUMBER, MAX_NUMBER)
     question = f'{first_num} {second_num}'
     result = math.gcd(first_num, second_num)
-    return str(result), question, RULE
+    return str(result), question

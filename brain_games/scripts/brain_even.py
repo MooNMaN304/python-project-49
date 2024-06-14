@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.games.even import del_of_two
+import brain_games.games.even
 from brain_games.tools.engine import generate_game_data
 
 
 def main():
-    generate_game_data(del_of_two)
+    generate_game_data(brain_games.games.even)
 
 
 if __name__ == "__main__":

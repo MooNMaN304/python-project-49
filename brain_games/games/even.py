@@ -1,15 +1,19 @@
 import random
 
 
-MIN_NUMBER_GAME = 1
-MAX_NUMBER_GAME = 100
+RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
+MIN_NUMBER = 1
+MAX_NUMBER = 100
 
 
-def del_of_two():
-    RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
-    question = random.randint(MIN_NUMBER_GAME, MAX_NUMBER_GAME)
-    if question % 2 == 0:
-        result = "yes"
+def del_of_two(number):
+    return (number % 2 == 0)
+
+
+def result_and_question():
+    question = random.randint(MIN_NUMBER, MAX_NUMBER)
+    if del_of_two(question) is True:
+        result = 'yes'
     else:
-        result = "no"
-    return result, str(question), RULE
+        result = 'no'
+    return result, str(question)
