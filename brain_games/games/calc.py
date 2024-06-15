@@ -4,13 +4,13 @@ import random
 RULE = 'What is the result of the expression?'
 MIN_NUMBER = 1
 MAX_NUMBER = 30
-OPERATOR = ['*', '-', '+']
+OPERATORS = ['*', '-', '+']
 
 
 def result_and_question():
     first_num = random.randint(MIN_NUMBER, MAX_NUMBER)
     second_num = random.randint(MIN_NUMBER, MAX_NUMBER)
-    math_operation = random.choice(OPERATOR)
+    math_operation = random.choice(OPERATORS)
     if math_operation == '+':
         result = first_num + second_num
     if math_operation == '-':

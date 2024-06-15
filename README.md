@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+\### Hexlet tests and linter status:
 [![Actions Status](https://github.com/MooNMaN304/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MooNMaN304/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ec7ee1436db4842256f1/maintainability)](https://codeclimate.com/github/MooNMaN304/python-project-49/maintainability)
 
@@ -11,7 +11,7 @@ Five mini brain-games for the terminal. Answer 3 times correctly and you win !
 | ------------- | ------------- |
 | 1  | Git clone this repository - https://github.com/MooNMaN304/python-project-49.git  |
 | 2  | Go to folder - cd python-project-49 |
-| 3  | Install Games - make install |
+| 3  | Install Games - make install -> make build -> make publish -> make package-install |
 
 ## How to start the game
 

@@ -15,11 +15,9 @@ def generate_game_data(game):
         answer = prompt.string('Your answer: ')
         if answer == result:
             print('Correct!')
-            if round == 2:
-                print(f'Congratulations, {name}!')
         else:
-            print(
-                f'"{answer}" is wrong answer ;(. Correct answer was "{result}".'
-            )
-            print(f'Let\'s try again, {name}!')
-            break
+            return print(
+                f'"{answer}" is wrong answer ;(.'
+                f' Correct answer was "{result}".\n'
+                f'Let\'s try again, {name}!')
+    print(f'Congratulations, {name}!')

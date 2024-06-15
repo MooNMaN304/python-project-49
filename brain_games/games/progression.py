@@ -4,20 +4,20 @@ import random
 RULE = 'What number is missing in the progression?'
 MIN_STEP = 1
 MAX_STEP = 20
-PROGRESSIVE_LENGHT = 10
-MIN_HIDDEN_NUM = 0
-MAX_HIDDEN_NUM = 9
+PROGRESSIVE_LENGTH = 10
+MIN_HIDDEN = 0
+MAX_HIDDEN = 9
 
 
 def result_and_question():
-    box = []
+    progression = []
     start = random.randint(MIN_STEP, MAX_STEP)
     step = random.randint(MIN_STEP, MAX_STEP)
-    steal_number = random.randint(MIN_HIDDEN_NUM, MAX_HIDDEN_NUM)
-    for i in range(PROGRESSIVE_LENGHT):
+    steal_number = random.randint(MIN_HIDDEN, MAX_HIDDEN)
+    for i in range(PROGRESSIVE_LENGTH):
         start += step
-        box += [start]
-    result = box[steal_number]
-    box[steal_number] = ".."
-    question = " ".join(map(str, box))
+        progression += [start]
+    result = progression[steal_number]
+    progression[steal_number] = '..'
+    question = ' '.join(map(str, progression))
     return str(result), question

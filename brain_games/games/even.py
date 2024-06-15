@@ -6,13 +6,13 @@ MIN_NUMBER = 1
 MAX_NUMBER = 100
 
 
-def del_of_two(number):
+def is_even(number):
     return (number % 2 == 0)
 
 
 def result_and_question():
     question = random.randint(MIN_NUMBER, MAX_NUMBER)
-    if del_of_two(question) is True:
+    if is_even(question) is True:
         result = 'yes'
     else:
         result = 'no'
