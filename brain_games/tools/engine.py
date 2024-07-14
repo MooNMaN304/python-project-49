@@ -11,7 +11,7 @@ def run_game(game):
     print(game.RULE)
     for round in range(GAME_COUNT):
         result, question = game.generate_game_data()
-        print(f'Question:  {question}')
+        print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer == result:
             print('Correct!')
