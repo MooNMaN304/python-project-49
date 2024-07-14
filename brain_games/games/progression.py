@@ -9,7 +9,7 @@ MIN_HIDDEN = 0
 MAX_HIDDEN = 9
 
 
-def result_and_question():
+def generate_game_data():
     progression = []
     start = random.randint(MIN_STEP, MAX_STEP)
     step = random.randint(MIN_STEP, MAX_STEP)
@@ -18,6 +18,6 @@ def result_and_question():
         start += step
         progression += [start]
     result = progression[steal_number]
-    progression[steal_number] = '..'
-    question = ' '.join(map(str, progression))
+    progression[steal_number] = ".."
+    question = " ".join(map(str, progression))
     return str(result), question

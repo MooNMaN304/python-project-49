@@ -15,7 +15,7 @@ def is_prime(number):
     return True
 
 
-def result_and_question():
+def generate_game_data():
     game_num = random.randint(MIN_NUMBER, MAX_NUMBER)
     question = game_num
     if is_prime(game_num) is True:

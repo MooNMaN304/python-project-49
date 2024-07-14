@@ -7,15 +7,15 @@ MAX_NUMBER = 30
 OPERATORS = ['*', '-', '+']
 
 
-def result_and_question():
+def generate_game_data():
     first_num = random.randint(MIN_NUMBER, MAX_NUMBER)
     second_num = random.randint(MIN_NUMBER, MAX_NUMBER)
-    math_operation = random.choice(OPERATORS)
-    if math_operation == '+':
+    operator = random.choice(OPERATORS)
+    if operator == '+':
         result = first_num + second_num
-    if math_operation == '-':
+    if operator == '-':
         result = first_num - second_num
-    if math_operation == '*':
+    if operator == '*':
         result = first_num * second_num
-    question = f'{first_num} {math_operation} {second_num}'
+    question = f'{first_num} {operator} {second_num}'
     return str(result), question
